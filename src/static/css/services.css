@@ -1,0 +1,18 @@
+.services-content .service-card {
+    margin-bottom: 20px;
+}
+
+.services-content .service-card .service-card-details {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+
+}
+
+.services-content .service-icon-content {
+    padding: 20px 0;
+}
+
+.services-content .service-icon {
+    font-size: 40px;
+    color: #00a8ff;
+}

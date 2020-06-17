@@ -1,0 +1,78 @@
+.resume {
+}
+
+.resume .resume-menu {
+}
+
+.resume .resume-menu ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.resume .resume-menu ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    text-align: left;
+    background-color: #00a8ff;
+}
+.resume .resume-menu ul li .resume-li-icon {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.resume .resume-menu ul li a {
+    font-size: 14px;
+    padding-left: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.resume .menu-content {
+    /*padding-top: 20px;*/
+}
+
+.menu-content .menu-content-card {
+    border-radius: 0;
+    box-shadow: 0 0 8px -4px #5a5a5a;
+}
+
+.menu-content .menu-content-header {
+    background-color: #ffffff;
+    color: #00a8ff;
+}
+
+.resume .menu-content .menu-content-badge {
+    background-color: #00a8ff;
+    color: #ffffff;
+    padding: 5px 3px;
+}
+
+.menu-content .menu-content-text {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.resume-skills .skills-header {
+    color: #00a8ff;
+}
+
+.resume-skills .resume-skills-progress {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.resume-skills .resume-skills-progress-bar {
+    background-color: #00a8ff;
+    font-weight: bold;
+}
+
+.resume-experience .experience-title {
+    padding-top: 10px;
+}
+
+.resume-experience .experience-text {
+    padding: 0;
+}

@@ -1,0 +1,44 @@
+.header {
+    width: 100%;
+    height: 80px;
+}
+
+.my-navbar {
+    height: 100%;
+}
+
+.my-navbar .my-navbar-nav li {
+    padding: 0 15px;
+}
+
+.my-navbar .my-navbar-nav li a {
+    font-size: 15px;
+    color: #00a8ff;
+}
+
+.my-navbar .navbar-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00a8ff;
+    z-index: 1;
+}
+
+.my-navbar-brand {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.my-navbar-brand::before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 50%;
+    background-color: #00a8ff;
+    z-index: -1;
+}

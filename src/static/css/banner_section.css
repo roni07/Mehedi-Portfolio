@@ -1,0 +1,18 @@
+.banner-section {
+    height: calc(100vh - 80px);
+    background-image: url('../images/banner_image.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.banner .second-text {
+    color: #ffffff;
+}
