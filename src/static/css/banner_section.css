@@ -11,8 +11,10 @@
     flex-direction: column;
     justify-content: center;
     color: #ffffff;
+    font-weight: 600;
 }
 
-.banner .second-text {
+.banner .first-text, .second-text, .third-text {
     color: #ffffff;
+    font-weight: 600;
 }

@@ -1,0 +1,75 @@
+.project {
+
+}
+
+.project-type .project-type-ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.project-type .project-type-ul li {
+    padding: 10px 10px 10px 0;
+}
+
+.project-type .project-type-ul li span {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid #00a8ff;
+    color: #424040e6;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.project-type .project-type-ul li span:hover {
+    background-color: #00a8ff;
+    color: #ffffff;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.project .project-content .content-details {
+    margin-bottom: 20px;
+}
+
+.project .project-content .content-details .content-info {
+    position: relative;
+    height: 240px;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.project .project-content .content-details .content-info .img {
+    overflow: hidden;
+    position: absolute;
+    height: 184px;
+    top: 0;
+}
+
+.project .project-content .content-details .content-info .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.project .project-content .content-details .content-info:hover > .img img {
+    transform: scale(1.3);
+    transition: all 1s ease-in-out;
+}
+
+.project .project-content .content-details .content-info .project-title {
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    margin: 0;
+    bottom: 0;
+    padding: 0 15px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: #424040e6;
+}

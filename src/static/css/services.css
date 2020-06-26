@@ -3,9 +3,21 @@
 }
 
 .services-content .service-card .service-card-details {
+    padding: 10px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
 
+}
+
+.service-card-details .service-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #424040e6;
+}
+
+.service-card-details .service-text {
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .services-content .service-icon-content {

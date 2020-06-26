@@ -1,0 +1,19 @@
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00a8ff;
+    background-color: #ffffff;
+    margin: 60px 0 50px 0;
+    padding: 10px;
+    box-shadow: 1px 3px 13px -8px #777777;
+    border-left: 7px double;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.section-title .icon {
+    display: flex;
+    align-items: center;
+    margin-right: 7px;
+}

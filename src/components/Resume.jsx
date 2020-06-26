@@ -1,18 +1,23 @@
 import * as React from 'react';
 
 import '../static/css/resume.css'
-import {RiBookOpenLine} from "react-icons/ri";
+import {RiBookOpenLine, RiFileUserLine, RiUserSettingsLine, RiLightbulbFlashLine} from "react-icons/ri";
+import SectionTitle from "./common/SectionTitle";
 
 const Resume = () => {
     return (
         <div className="resume">
             <div className="resume-content container">
+                <SectionTitle
+                    icon={<RiFileUserLine />}
+                    title="My Resume"
+                />
                 <div className="row pt-4 pb-4">
                     <div className="resume-menu col-4 justify-content-md-start">
                         <ul>
                             <li><RiBookOpenLine className="resume-li-icon"/><a href="#">Education</a></li>
-                            <li><a href="#">Experience</a></li>
-                            <li><a href="#">Skill</a></li>
+                            <li><RiUserSettingsLine className="resume-li-icon"/><a href="#">Experience</a></li>
+                            <li><RiLightbulbFlashLine className="resume-li-icon"/><a href="#">Skill</a></li>
                         </ul>
                     </div>
 
@@ -113,7 +118,7 @@ const Resume = () => {
                                     </div>
                                 </div>
 
-                                <p className="m-0 skills-header">React</p>
+                                <p className="m-0 skills-header">React JS</p>
                                 <div className="progress mb-3 resume-skills-progress">
                                     <div className="progress-bar resume-skills-progress-bar" role="progressbar"
                                          style={{width: "30%"}}

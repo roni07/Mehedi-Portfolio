@@ -1,0 +1,93 @@
+.contact .contact-title p {
+    margin-bottom: 0;
+    color: #404040;
+    font-size: 14px;
+}
+
+.contact .contact-title h2 {
+    font-weight: 600;
+    color: #00a8ff;
+    padding-bottom: 20px;
+}
+
+.contact-form-message {
+    text-align: left;
+    font-weight: 600;
+    color: #00a8ff;
+}
+
+.contact .contact-form .form-control {
+    border: 1px solid #00a8ff;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.contact .contact-form textarea {
+    line-height: 4;
+}
+
+.contact-form .form-btn {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #00a8ff;
+    font-size: 14px;
+}
+
+.contact-info {
+    padding-left: 50px;
+}
+
+.contact .contact-info-header {
+    text-align: left;
+}
+
+.contact .contact-info-header h5 {
+    color: #00a8ff;
+    font-weight: 600;
+}
+
+.contact .contact-info-header p {
+    color: #404040;
+    font-size: 13px;
+}
+
+.contact-info-details ul {
+    padding-left: 10px;
+}
+
+.contact-info-details li {
+    list-style: none;
+}
+
+.contact-info-details .info-list {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.contact-info-details .info-list .info-icon {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: #00a8ff;
+}
+
+.contact-info-details .info-list .icon-details {
+    padding-left: 60px;
+    text-align: justify;
+}
+
+.contact-info-details .info-list .icon-details p {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: #00a8ff;
+}
+
+.contact-info-details .info-list .icon-details span {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #404040;
+}
