@@ -45,10 +45,18 @@
 }
 
 .menu-content .menu-content-text {
-    padding-top: 10px;
+    padding-top: 7px;
     font-size: 13px;
     line-height: 20px;
     font-weight: 300;
+}
+
+.resume-education .institute-name {
+    font-weight: 400;
+    font-size: 14px;
+    color: #313131;
+    padding-top: 10px;
+    margin-bottom: 0;
 }
 
 .resume-experience .experience-title {

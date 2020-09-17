@@ -1,33 +1,35 @@
 import * as React from 'react';
 import '../static/css/header.css';
 
-const Header = (props) => {
+import {Link} from 'react-router-dom';
+
+const Header = () => {
     return (
         <header className="header">
             <nav className="container navbar my-navbar navbar-expand-lg">
-                <a className="navbar-brand navbar-logo" href="#">
+                <Link className="navbar-brand navbar-logo" to='/'>
                     <span className="my-navbar-brand">M</span>ehedi
-                </a>
+                </Link>
 
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav my-navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Home</a>
+                            <Link to='/'><span className="nav-link">Home</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">About</a>
+                            <Link to='/about'><span className="nav-link">About</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Resume</a>
+                            <Link to='/resume'><span className="nav-link">Resume</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Services</a>
+                            <Link to='/service'><span className="nav-link">Services</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Project</a>
+                            <Link to='/project'><span className="nav-link">Project</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Contact</a>
+                            <Link to='/contact'><span className="nav-link">Contact</span></Link>
                         </li>
 
                     </ul>

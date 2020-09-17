@@ -1,48 +1,77 @@
 import * as React from 'react';
+import {Component} from 'react';
 
 import '../static/css/about_section.css';
+import Moment from "react-moment";
+import {getUser} from "../services/AboutService";
+import {getSkillList} from "../services/ResumeService";
+import Loader from "./common/Loader";
 
-const AboutSection = () => {
-    return (
-        <div className="about-section row m-0">
-            <div className="about-image col-6">
-                <div className="image-content">
-                </div>
-            </div>
+class AboutSection extends Component {
 
-            <div className="about-details col-6">
-                <h2 className="about-title">About Me</h2>
-                <p className="about-title-details">A small river named Duden flows by their place and supplies it with
-                    the necessary regelialia.</p>
-                <div className="expertise">
-                    <span className="badge">Spring Boot</span>
-                    <span className="badge">Angular</span>
-                    <span className="badge">React</span>
-                    <span className="badge">JS</span>
-                    <span className="badge">HTML</span>
-                    <span className="badge">CSS</span>
-                </div>
-                <div className="about-content row">
-                    <div className="about-content-left col-3">
-                        <p>Name:</p>
-                        <p>Phone:</p>
-                        <p>Mail:</p>
-                        <p>Location:</p>
-                        <p>Age:</p>
-                    </div>
+    state = {
+        loading: true,
+        user: null,
+        skillList: [],
+    };
 
-                    <div className="about-content-right col-9">
-                        <p>Md. Mehedi Hasan</p>
-                        <p>+8801781408652</p>
-                        <p>mdmehedihasanroni28@gmail.com</p>
-                        <p>Uttara, Azampur, Dhaka - 1230</p>
-                        <p>23</p>
+    componentDidMount() {
+        getUser()
+            .then(response => this.setState({user: response.data, loading: false}));
+
+        getSkillList()
+            .then(response => this.setState({skillList: response.data}));
+    }
+
+    render() {
+
+        if (this.state.loading || !this.state.user) {
+            return <Loader/>
+        }
+
+        return (
+            <div className="about-section row m-0">
+                <div className="about-image col-6">
+                    <div className="image-content">
                     </div>
                 </div>
-                <button type="button" className="btn download-btn">DOWNLOAD CV</button>
+
+                <div className="about-details col-6">
+                    <h2 className="about-title">About Me</h2>
+                    <p className="about-title-details">A small river named Duden flows by their place and supplies it
+                        with
+                        the necessary regelialia.</p>
+                    <div className="expertise">
+                        {
+                            this.state.skillList.map(value => <span className="badge"
+                                                                    key={value.id}>{value.skillName}</span>)
+                        }
+                    </div>
+                    <div className="about-content row">
+                        <div className="about-content-left col-3">
+                            <p>Name:</p>
+                            <p>Phone:</p>
+                            <p>Mail:</p>
+                            <p>Location:</p>
+                            <p>Age:</p>
+                        </div>
+
+                        <div className="about-content-right col-9">
+                            <p>{this.state.user.name.firstName} {this.state.user.name.lastName}</p>
+                            <p>{this.state.user.contact.phone}</p>
+                            <p>{this.state.user.contact.email}</p>
+                            <p>{this.state.user.address.streetName}, #{this.state.user.address.streetNumber},&nbsp;
+                                {this.state.user.address.city}, {this.state.user.address.country}</p>
+                            <p>
+                                <Moment fromNow ago>{this.state.user.dateOfBirth}</Moment>
+                            </p>
+                        </div>
+                    </div>
+                    <button type="button" className="btn download-btn">DOWNLOAD CV</button>
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default AboutSection;

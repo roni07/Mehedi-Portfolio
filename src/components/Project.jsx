@@ -3,68 +3,69 @@ import {Component} from 'react';
 
 import '../static/css/project.css';
 
-import '../static/images/projects/web_design.jpg'
 import SectionTitle from "./common/SectionTitle";
 import {RiFolderSettingsLine} from "react-icons/ri";
 
-const projects = [
-    {"id": 1, "title": "Web Development", "image": "website.jpg", "type": "WEB DEVELOPMENT"},
-    {"id": 2, "title": "Photography", "image": "photography_one.jpg", "type": "PHOTOGRAPHY"},
-    {"id": 3, "title": "Photography", "image": "photography_two.jpg", "type": "PHOTOGRAPHY"},
-    {"id": 4, "title": "Android", "image": "android_one.png", "type": "ANDROID"},
-    {"id": 5, "title": "Android", "image": "android_two.png", "type": "ANDROID"},
-    {"id": 6, "title": "Web Design", "image": "web_design.jpg", "type": "WEB DESIGN"}
-];
-
+import {getProjectListByProjectTypeFromServer, getProjectListFromServer} from "../services/ProjectService";
+import Loader from "./common/Loader";
 
 class Project extends Component {
 
     state = {
-        projects: projects
+        loading: true,
+        projectList: [],
     }
 
-    filterProject = (type) => {
+    componentDidMount() {
 
-        if (type === "ALL") {
-            this.setState(
-                {
-                    projects: projects
-                }
-            )
-        } else {
-            this.setState(
-                {
-                    projects: projects.filter(value => value.type === type)
-                }
-            )
-        }
+        getProjectListFromServer()
+            .then(response => this.setState({projectList: response.data, loading: false}));
+    }
+
+    getProjectList = () => {
+        getProjectListFromServer()
+            .then(response => this.setState({projectList: response.data, loading: false}));
+    }
+
+    getProjectListByProjectType = (type) => {
+        getProjectListByProjectTypeFromServer(type)
+            .then(response => this.setState({projectList: response.data}));
     }
 
     render() {
+
+        if (this.state.loading || !this.state.projectList) {
+            return <Loader/>
+        }
 
         return (
             <div className="project">
                 <div className="container">
                     <SectionTitle
-                        icon={<RiFolderSettingsLine />}
+                        icon={<RiFolderSettingsLine/>}
                         title="My Project"
                     />
+
                     <div className="project-type">
                         <ul className="project-type-ul">
-                            <li><span onClick={() => this.filterProject("ALL")} className="badge">ALL</span></li>
-                            <li><span onClick={() => this.filterProject("WEB DEVELOPMENT")} className="badge">Web Development</span></li>
-                            <li><span onClick={() => this.filterProject("ANDROID")} className="badge">Mobile Design</span></li>
-                            <li><span onClick={() => this.filterProject("PHOTOGRAPHY")} className="badge">Photography</span></li>
-                            <li><span onClick={() => this.filterProject("WEB DESIGN")} className="badge">Web Design</span></li>
+                            <li><span onClick={() => this.getProjectList()} className="badge">ALL</span></li>
+                            {
+                                this.state.projectList.map(value => <li key={value.id}>
+                                    <span onClick={() => this.getProjectListByProjectType(value.projectType)}
+                                          className="badge">{this.enumSeparator(value.projectType)}</span>
+                                </li>)
+                            }
                         </ul>
                     </div>
 
                     <div className="row project-content">
                         {
-                            this.state.projects.map(value => <div key={value.id} className="col-4 content-details">
+                            this.state.projectList.map(value => <div key={value.id} className="col-4 content-details">
                                 <div className="content-info">
                                     <div className="img">
-                                        <img src={require(`../static/images/projects/${value.image}`)} alt="image"/>
+                                        <img
+                                            src={`http://localhost:8082/public/request/file/retrieve/${value.imageUrl}`}
+                                            alt="image"/>
                                     </div>
                                     <h2 className="project-title">{value.title}</h2>
                                 </div>
@@ -75,6 +76,11 @@ class Project extends Component {
             </div>
         );
     }
-};
+
+    enumSeparator = (value) => {
+        return value.replace(/_/g, " ");
+    }
+
+}
 
 export default Project;

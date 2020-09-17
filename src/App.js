@@ -9,17 +9,23 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 function App() {
     return (
         <div className="App">
-            <Header/>
-            <BannerSection/>
-            <AboutSection/>
-            <Resume/>
-            <Services/>
-            <Project/>
-            <Contact/>
-            <Footer/>
+            <Router>
+                <Header/>
+                <Switch>
+                    <Route exact path='/' component={BannerSection}/>
+                    <Route path='/about' component={AboutSection}/>
+                    <Route path='/resume' component={Resume}/>
+                    <Route path='/service' component={Services}/>
+                    <Route path='/project' component={Project}/>
+                    <Route path='/contact' component={Contact}/>
+                </Switch>
+                <Footer/>
+            </Router>
         </div>
     );
 }
