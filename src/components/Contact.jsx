@@ -39,14 +39,14 @@ class Contact extends Component {
                         </div>
 
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-lg-6 col-sm-12">
                                 <h5 className="contact-form-message">Message me</h5>
                                 <form className="contact-form">
                                     <div className="form-row">
-                                        <div className="col-6 mb-3">
+                                        <div className="col-lg-6 col-sm-12 mb-3">
                                             <input type="text" className="form-control" placeholder="Name"/>
                                         </div>
-                                        <div className="col-6 mb-3">
+                                        <div className="col-lg-6 col-sm-12 mb-3">
                                             <input type="text" className="form-control" placeholder="Email"/>
                                         </div>
 
@@ -62,7 +62,7 @@ class Contact extends Component {
                                 </form>
                             </div>
 
-                            <div className="col-6 contact-info">
+                            <div className="col-lg-6 col-sm-12 contact-info">
                                 <div className="contact-info-header">
                                     <h5>Contact info</h5>
                                     <p className="contact-info-text">Always available for freelance work if the

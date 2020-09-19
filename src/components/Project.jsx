@@ -47,10 +47,10 @@ class Project extends Component {
                     />
 
                     <div className="project-type">
-                        <ul className="project-type-ul">
-                            <li><span onClick={() => this.getProjectList()} className="badge">ALL</span></li>
+                        <ul className="project-type-ul list-inline row">
+                            <li><span onClick={() => this.getProjectList()} className="badge list-inline-item">ALL</span></li>
                             {
-                                this.state.projectList.map(value => <li key={value.id}>
+                                this.state.projectList.map(value => <li key={value.id} className="list-inline-item">
                                     <span onClick={() => this.getProjectListByProjectType(value.projectType)}
                                           className="badge">{this.enumSeparator(value.projectType)}</span>
                                 </li>)
@@ -60,12 +60,12 @@ class Project extends Component {
 
                     <div className="row project-content">
                         {
-                            this.state.projectList.map(value => <div key={value.id} className="col-4 content-details">
+                            this.state.projectList.map(value => <div key={value.id} className="col-lg-4 col-md-6 col-sm-12 justify-content-sm-center content-details">
                                 <div className="content-info">
                                     <div className="img">
                                         <img
                                             src={`http://localhost:8082/public/request/file/retrieve/${value.imageUrl}`}
-                                            alt="image"/>
+                                            alt="upload"/>
                                     </div>
                                     <h2 className="project-title">{value.title}</h2>
                                 </div>

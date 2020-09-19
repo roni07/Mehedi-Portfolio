@@ -1,4 +1,5 @@
 .about-section {
+    height: calc(100vh - 165px);
     width: 100%;
     box-shadow: 0 0 10px -6px #5a5a5a;
 }

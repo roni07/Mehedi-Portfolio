@@ -16,7 +16,7 @@ const Services = () => {
                 />
 
                 <div className="row justify-content-md-between">
-                    <div className="col-4 service-card">
+                    <div className="col-lg-4 col-md-6 col-sm-12 service-card">
                         <div className="service-card-details">
                             <div className="service-icon-content">
                                 <GrReactjs className="service-icon"/>
@@ -26,7 +26,7 @@ const Services = () => {
                                 regelialia.</p>
                         </div>
                     </div>
-                    <div className="col-4 service-card">
+                    <div className="col-lg-4 col-md-6 col-sm-12 service-card">
                         <div className="service-card-details">
                             <div className="service-icon-content">
                                 <GrAndroid className="service-icon"/>
@@ -36,7 +36,7 @@ const Services = () => {
                                 regelialia.</p>
                         </div>
                     </div>
-                    <div className="col-4 service-card">
+                    <div className="col-lg-4 col-md-6 col-sm-12 service-card">
                         <div className="service-card-details">
                             <div className="service-icon-content">
                                 <IoIosBrush className="service-icon"/>
@@ -46,7 +46,7 @@ const Services = () => {
                                 regelialia.</p>
                         </div>
                     </div>
-                    <div className="col-4 service-card">
+                    <div className="col-lg-4 col-md-6 col-sm-12 service-card">
                         <div className="service-card-details">
                             <div className="service-icon-content">
                                 <IoMdCamera className="service-icon"/>
@@ -56,7 +56,7 @@ const Services = () => {
                                 regelialia.</p>
                         </div>
                     </div>
-                    <div className="col-4 service-card">
+                    <div className="col-lg-4 col-md-6 col-sm-12 service-card">
                         <div className="service-card-details">
                             <div className="service-icon-content">
                                 <IoIosStarHalf className="service-icon"/>
@@ -66,7 +66,7 @@ const Services = () => {
                                 regelialia.</p>
                         </div>
                     </div>
-                    <div className="col-4 service-card">
+                    <div className="col-lg-4 col-md-6 col-sm-12 service-card">
                         <div className="service-card-details">
                             <div className="service-icon-content">
                                 <IoIosBug className="service-icon"/>

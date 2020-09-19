@@ -1,3 +1,7 @@
+.resume {
+    min-height: calc(100vh - 225px);
+}
+
 .resume .resume-menu ul {
     padding-left: 0;
     list-style: none;
@@ -16,7 +20,7 @@
     color: #ffffff;
 }
 
-.resume .resume-menu ul li a {
+.resume .resume-menu ul li .resume-link {
     font-size: 14px;
     padding-left: 10px;
     color: #ffffff;
