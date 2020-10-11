@@ -25,7 +25,7 @@ const AboutSection = () => {
                 setUser(response.data);
                 setLoading(false);
             }).catch((error) => {
-            setLoading(false);
+            setLoading(true);
             console.log(error);
         });
     }
