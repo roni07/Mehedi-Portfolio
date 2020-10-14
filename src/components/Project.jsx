@@ -64,7 +64,7 @@ class Project extends Component {
                                 <div className="content-info">
                                     <div className="img">
                                         <img
-                                            src={`http://localhost:8082/public/request/file/retrieve/${value.imageUrl}`}
+                                            src={`http://20.46.181.244:8082/public/request/file/retrieve/${value.imageUrl}`}
                                             alt="upload"/>
                                     </div>
                                     <h2 className="project-title">{value.title}</h2>
