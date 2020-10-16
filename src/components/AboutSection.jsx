@@ -7,7 +7,7 @@ import {getUser} from "../services/AboutService";
 import {getSkillList} from "../services/ResumeService";
 import Loader from "./common/Loader";
 
-const AboutSection = () => {
+const AboutSection = ({id}) => {
 
     const [user, setUser] = useState({});
     const [skillList, setSkill] = useState([]);
@@ -40,7 +40,7 @@ const AboutSection = () => {
     }
 
     return (
-        <div className="about-section row m-0">
+        <div className="about-section row m-0" id={id}>
             <div className="about-image col-lg-6 col-md-6 col-sm-12">
                 <div className="image-content">
                 </div>

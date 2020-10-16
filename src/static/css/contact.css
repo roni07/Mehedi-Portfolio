@@ -90,4 +90,5 @@
     padding: 0;
     font-size: 13px;
     color: #404040;
+    word-break: break-all;
 }

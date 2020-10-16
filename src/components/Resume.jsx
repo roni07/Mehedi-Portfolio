@@ -10,7 +10,7 @@ import Experience from "./Experience";
 import Skill from "./Skill";
 import {getEducationList, getExperienceList, getSkillList} from "../services/ResumeService";
 
-import {Link, Switch, Route} from "react-router-dom";
+import {Link, Route, Switch, withRouter} from "react-router-dom";
 
 class Resume extends Component {
 
@@ -40,7 +40,7 @@ class Resume extends Component {
         }
 
         return (
-            <div className="resume">
+            <div className="resume" id={this.props.id}>
                 <div className="resume-content container">
                     <SectionTitle
                         icon={<RiFileUserLine/>}
@@ -55,7 +55,8 @@ class Resume extends Component {
                                 </li>
                                 <li>
                                     <RiUserSettingsLine className="resume-li-icon"/>
-                                    <Link to={`${this.props.match.path}/experience`} className="resume-link">Experience</Link>
+                                    <Link to={`${this.props.match.path}/experience`}
+                                          className="resume-link">Experience</Link>
                                 </li>
                                 <li>
                                     <RiLightbulbFlashLine className="resume-li-icon"/>
@@ -66,10 +67,12 @@ class Resume extends Component {
 
                         <div className="menu-content col-8">
                             <Switch>
-                                <Route exact={true} path={`${this.props.match.path}`} render={(props) => <Education {...props}
-                                                                                                       educationList={this.state.educationList}/>}/>
-                                <Route exact={true} path={`${this.props.match.path}/experience`} render={(props) => <Experience {...props}
-                                                                                                                   experienceList={this.state.experienceList}/>}/>
+                                <Route exact={true} path={`${this.props.match.path}`}
+                                       render={(props) => <Education {...props}
+                                                                     educationList={this.state.educationList}/>}/>
+                                <Route exact={true} path={`${this.props.match.path}/experience`}
+                                       render={(props) => <Experience {...props}
+                                                                      experienceList={this.state.experienceList}/>}/>
                                 <Route exact={true} path={`${this.props.match.path}/skill`}
                                        render={(props) => <Skill {...props} skillList={this.state.skillList}/>}/>
                             </Switch>
@@ -81,4 +84,4 @@ class Resume extends Component {
     }
 }
 
-export default Resume;
+export default withRouter(Resume);

@@ -2,7 +2,7 @@ import * as React from "react";
 
 const Skill = (props) => {
     return (
-        <div className="row justify-content-md-between resume-skills">
+        <div className="row justify-content-md-between resume-skills" id={props.id}>
 
             {
                 props.skillList.map(value => <div key={value.id} className="col-lg-6 col-sm-12">

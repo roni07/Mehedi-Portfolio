@@ -1,10 +1,10 @@
 import * as React from 'react';
 import '../static/css/banner_section.css';
 
-const BannerSection = () => {
+const BannerSection = ({id}) => {
 
     return (
-        <section className="banner-section">
+        <section className="banner-section" id={id}>
             <div className="container banner h-100">
                 <h6 className="first-text">HEY! I AM</h6>
                 <h1 className="second-text">Mehedi Hasan</h1>

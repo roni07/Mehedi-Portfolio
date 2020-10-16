@@ -1,20 +1,31 @@
 .header {
+    position: sticky;
     width: 100%;
     height: 80px;
     background-color: #ffffff;
     box-shadow: 0 0 10px -6px #5a5a5a;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 
 .my-navbar {
     height: 100%;
 }
 
-.my-navbar .my-navbar-nav li {
+.my-navbar .my-navbar-nav a {
     padding: 0 15px;
+    font-size: 15px;
+    color: #00a8ff;
+    cursor: pointer;
 }
 
-.my-navbar .my-navbar-nav li a {
-    font-size: 15px;
+.my-navbar .my-navbar-nav a.active {
+    color: #ff4081;
+    transition: background-color 2s ease-out;
+}
+
+.my-navbar .my-navbar-nav a:hover {
     color: #00a8ff;
 }
 

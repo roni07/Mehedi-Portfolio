@@ -1,5 +1,5 @@
 .resume {
-    min-height: calc(100vh - 225px);
+    /*min-height: calc(100vh - 225px);*/
 }
 
 .resume .resume-menu ul {
@@ -15,6 +15,7 @@
     text-align: left;
     background-color: #00a8ff;
 }
+
 .resume .resume-menu ul li .resume-li-icon {
     font-size: 16px;
     color: #ffffff;

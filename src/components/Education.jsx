@@ -3,8 +3,7 @@ import Moment from "react-moment";
 
 const Education = (props) => {
     return (
-        <div className="row justify-content-md-between resume-education">
-
+        <div className="row justify-content-md-between resume-education" id={props.id}>
             {
                 props.educationList.map(educationValue => <div className="col-lg-6 col-sm-12 mb-3"
                                                                key={educationValue.id}>

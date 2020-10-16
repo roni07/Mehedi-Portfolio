@@ -39,7 +39,7 @@ class Project extends Component {
         }
 
         return (
-            <div className="project">
+            <div className="project" id={this.props.id}>
                 <div className="container">
                     <SectionTitle
                         icon={<RiFolderSettingsLine/>}
@@ -48,7 +48,8 @@ class Project extends Component {
 
                     <div className="project-type">
                         <ul className="project-type-ul list-inline row">
-                            <li><span onClick={() => this.getProjectList()} className="badge list-inline-item">ALL</span></li>
+                            <li><span onClick={() => this.getProjectList()}
+                                      className="badge list-inline-item">ALL</span></li>
                             {
                                 this.state.projectList.map(value => <li key={value.id} className="list-inline-item">
                                     <span onClick={() => this.getProjectListByProjectType(value.projectType)}
@@ -60,7 +61,8 @@ class Project extends Component {
 
                     <div className="row project-content">
                         {
-                            this.state.projectList.map(value => <div key={value.id} className="col-lg-4 col-md-6 col-sm-12 justify-content-sm-center content-details">
+                            this.state.projectList.map(value => <div key={value.id}
+                                                                     className="col-lg-4 col-md-6 col-sm-12 justify-content-sm-center content-details">
                                 <div className="content-info">
                                     <div className="img">
                                         <img

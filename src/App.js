@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './app.css';
 import BannerSection from "./components/BannerSection";
 import Header from "./components/Header";
@@ -9,25 +9,23 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router} from  "react-router-dom";
 
-function App() {
+const App = () => {
     return (
-        <div className="App">
-            <Router>
+        <Router>
+            <Fragment>
                 <Header/>
-                <Switch>
-                    <Route exact path='/' component={BannerSection}/>
-                    <Route path='/about' component={AboutSection}/>
-                    <Route path='/resume' component={Resume}/>
-                    <Route path='/service' component={Services}/>
-                    <Route path='/project' component={Project}/>
-                    <Route path='/contact' component={Contact}/>
-                </Switch>
-            </Router>
-            <Footer/>
-        </div>
-    );
+                <BannerSection id="home"/>
+                <AboutSection id="about"/>
+                <Resume id="resume"/>
+                <Services id="services"/>
+                <Project id="project"/>
+                <Contact id="contact"/>
+                <Footer/>
+            </Fragment>
+        </Router>
+    )
 }
 
 export default App;

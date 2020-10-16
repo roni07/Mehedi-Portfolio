@@ -11,7 +11,7 @@ class Contact extends Component {
 
     state = {
         loading: true,
-        user: null,
+        user: null
     }
 
     async componentDidMount() {
@@ -26,7 +26,7 @@ class Contact extends Component {
         }
 
         return (
-            <div className="contact">
+            <div className="contact" id={this.props.id}>
                 <div className="contact-content container">
                     <SectionTitle
                         icon={<RiContactsLine/>}
@@ -88,7 +88,7 @@ class Contact extends Component {
                                                 <span className="info-icon"><RiMapPinLine/></span>
                                                 <div className="icon-details">
                                                     <p>Location</p>
-                                                    <span>{this.state.user.address.streetName}, #{this.state.user.address.streetNumber},&nbsp;
+                                                    <span>{this.state.user.address.streetName}, #{this.state.user.address.streetNumber},
                                                         {this.state.user.address.city}, {this.state.user.address.country}</span>
                                                 </div>
                                             </div>

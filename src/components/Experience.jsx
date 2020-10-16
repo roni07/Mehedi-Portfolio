@@ -3,7 +3,7 @@ import * as React from "react";
 
 const Experience = (props) => {
     return (
-        <div className="row justify-content-md-between resume-experience">
+        <div className="row justify-content-md-between resume-experience" id={props.id}>
 
             {
                 props.experienceList.map(experienceValue => <div className="col-lg-6 col-sm-12 mb-3"

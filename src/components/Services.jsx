@@ -5,13 +5,13 @@ import {IoIosBrush, IoIosBug, IoIosStarHalf, IoMdCamera} from "react-icons/io";
 import {RiBriefcaseLine} from "react-icons/ri";
 import SectionTitle from "./common/SectionTitle";
 
-const Services = () => {
+const Services = ({id}) => {
     return (
-        <div className="services">
+        <div className="services" id={id}>
             <div className="container services-content">
 
                 <SectionTitle
-                    icon={<RiBriefcaseLine />}
+                    icon={<RiBriefcaseLine/>}
                     title="My Services"
                 />
 
@@ -22,7 +22,8 @@ const Services = () => {
                                 <GrReactjs className="service-icon"/>
                             </div>
                             <h4 className="service-title">Web Developing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it with the necessary
+                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                                with the necessary
                                 regelialia.</p>
                         </div>
                     </div>
@@ -32,7 +33,8 @@ const Services = () => {
                                 <GrAndroid className="service-icon"/>
                             </div>
                             <h4 className="service-title">Android Developing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it with the necessary
+                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                                with the necessary
                                 regelialia.</p>
                         </div>
                     </div>
@@ -42,7 +44,8 @@ const Services = () => {
                                 <IoIosBrush className="service-icon"/>
                             </div>
                             <h4 className="service-title">Web Page Designing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it with the necessary
+                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                                with the necessary
                                 regelialia.</p>
                         </div>
                     </div>
@@ -52,7 +55,8 @@ const Services = () => {
                                 <IoMdCamera className="service-icon"/>
                             </div>
                             <h4 className="service-title">Photography</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it with the necessary
+                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                                with the necessary
                                 regelialia.</p>
                         </div>
                     </div>
@@ -62,7 +66,8 @@ const Services = () => {
                                 <IoIosStarHalf className="service-icon"/>
                             </div>
                             <h4 className="service-title">Branding</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it with the necessary
+                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                                with the necessary
                                 regelialia.</p>
                         </div>
                     </div>
@@ -72,7 +77,8 @@ const Services = () => {
                                 <IoIosBug className="service-icon"/>
                             </div>
                             <h4 className="service-title">Web Page Bug Fixing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it with the necessary
+                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                                with the necessary
                                 regelialia.</p>
                         </div>
                     </div>
