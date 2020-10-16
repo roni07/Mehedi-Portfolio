@@ -51,29 +51,29 @@ class Resume extends Component {
                             <ul>
                                 <li>
                                     <RiBookOpenLine className="resume-li-icon"/>
-                                    <Link to={`${this.props.match.path}`} className="resume-link">Education</Link>
+                                    <Link to="/" className="resume-link">Education</Link>
                                 </li>
                                 <li>
                                     <RiUserSettingsLine className="resume-li-icon"/>
-                                    <Link to={`${this.props.match.path}/experience`}
+                                    <Link to="/experience"
                                           className="resume-link">Experience</Link>
                                 </li>
                                 <li>
                                     <RiLightbulbFlashLine className="resume-li-icon"/>
-                                    <Link to={`${this.props.match.path}/skill`} className="resume-link">Skill</Link>
+                                    <Link to="/skill" className="resume-link">Skill</Link>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="menu-content col-8">
                             <Switch>
-                                <Route exact={true} path={`${this.props.match.path}`}
+                                <Route exact={true} path="/"
                                        render={(props) => <Education {...props}
                                                                      educationList={this.state.educationList}/>}/>
-                                <Route exact={true} path={`${this.props.match.path}/experience`}
+                                <Route exact={true} path="/experience"
                                        render={(props) => <Experience {...props}
                                                                       experienceList={this.state.experienceList}/>}/>
-                                <Route exact={true} path={`${this.props.match.path}/skill`}
+                                <Route exact={true} path="/skill"
                                        render={(props) => <Skill {...props} skillList={this.state.skillList}/>}/>
                             </Switch>
                         </div>
