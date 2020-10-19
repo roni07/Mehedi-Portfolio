@@ -22,9 +22,9 @@ const Services = ({id}) => {
                                 <GrReactjs className="service-icon"/>
                             </div>
                             <h4 className="service-title">Web Developing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                            {/*<p className="service-text">A small river named Duden flows by their place and supplies it
                                 with the necessary
-                                regelialia.</p>
+                                regelialia.</p>*/}
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 service-card">
@@ -33,9 +33,9 @@ const Services = ({id}) => {
                                 <GrAndroid className="service-icon"/>
                             </div>
                             <h4 className="service-title">Android Developing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                            {/*<p className="service-text">A small river named Duden flows by their place and supplies it
                                 with the necessary
-                                regelialia.</p>
+                                regelialia.</p>*/}
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 service-card">
@@ -44,9 +44,9 @@ const Services = ({id}) => {
                                 <IoIosBrush className="service-icon"/>
                             </div>
                             <h4 className="service-title">Web Page Designing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                            {/*<p className="service-text">A small river named Duden flows by their place and supplies it
                                 with the necessary
-                                regelialia.</p>
+                                regelialia.</p>*/}
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 service-card">
@@ -55,9 +55,9 @@ const Services = ({id}) => {
                                 <IoMdCamera className="service-icon"/>
                             </div>
                             <h4 className="service-title">Photography</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                            {/*<p className="service-text">A small river named Duden flows by their place and supplies it
                                 with the necessary
-                                regelialia.</p>
+                                regelialia.</p>*/}
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 service-card">
@@ -66,9 +66,9 @@ const Services = ({id}) => {
                                 <IoIosStarHalf className="service-icon"/>
                             </div>
                             <h4 className="service-title">Branding</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                            {/*<p className="service-text">A small river named Duden flows by their place and supplies it
                                 with the necessary
-                                regelialia.</p>
+                                regelialia.</p>*/}
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 service-card">
@@ -77,9 +77,9 @@ const Services = ({id}) => {
                                 <IoIosBug className="service-icon"/>
                             </div>
                             <h4 className="service-title">Web Page Bug Fixing</h4>
-                            <p className="service-text">A small river named Duden flows by their place and supplies it
+                            {/*<p className="service-text">A small river named Duden flows by their place and supplies it
                                 with the necessary
-                                regelialia.</p>
+                                regelialia.</p>*/}
                         </div>
                     </div>
                 </div>

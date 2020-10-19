@@ -13,6 +13,7 @@
     font-weight: 600;
     font-size: 18px;
     color: #424040e6;
+    text-align: center;
 }
 
 .service-card-details .service-text {
@@ -22,6 +23,7 @@
 
 .services-content .service-icon-content {
     padding: 20px 0;
+    text-align: center;
 }
 
 .services-content .service-icon {
