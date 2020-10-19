@@ -1,5 +1,5 @@
 .header {
-    position: sticky;
+    position: fixed;
     width: 100%;
     height: 80px;
     background-color: #ffffff;
@@ -10,23 +10,10 @@
 }
 
 .my-navbar {
+    display: flex;
     height: 100%;
-}
-
-.my-navbar .my-navbar-nav a {
-    padding: 0 15px;
-    font-size: 15px;
-    color: #00a8ff;
-    cursor: pointer;
-}
-
-.my-navbar .my-navbar-nav a.active {
-    color: #ff4081;
-    transition: background-color 2s ease-out;
-}
-
-.my-navbar .my-navbar-nav a:hover {
-    color: #00a8ff;
+    justify-content: center;
+    align-items: center;
 }
 
 .my-navbar .navbar-logo {
@@ -54,4 +41,88 @@
     border-radius: 50%;
     background-color: #00a8ff;
     z-index: -1;
+}
+
+.toggle {
+    display: none;
+}
+
+.nav-items {
+    width: 70vw;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.nav-items li a {
+    padding: 10px 15px;
+    cursor: pointer;
+    background: linear-gradient(to left, #ffffff 50%, #00a8ff 50%) right;
+    background-size: 210%;
+    transition: 500ms ease-in-out;
+}
+
+.nav-items li a:hover {
+    background-position: left;
+}
+
+.nav-items a.link-active {
+    color: #ff4081;
+}
+
+@media screen and (max-width: 991px) {
+    .my-navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .nav-items {
+        position: absolute;
+        width: 250px;
+        height: 314px;
+        right: 0;
+        top: 80px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        color: #000000;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s all ease-in-out;
+        box-shadow: 0 3px 16px -5px #5a5a5a;
+    }
+
+    .nav-items.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-items li {
+        width: 100%;
+    }
+
+    .nav-items li a {
+        padding: 10px 0;
+        cursor: pointer;
+        margin: 5px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .toggle {
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 0;
+        transform: translate(-100%, 70%);
+        font-size: 24px;
+    }
 }

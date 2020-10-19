@@ -1,35 +1,54 @@
 import * as React from 'react';
+import {useState} from 'react';
 import '../static/css/header.css';
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import {Link} from "react-scroll";
+import {FaBars} from "react-icons/fa"
 
 const Header = () => {
+
+    const [toggle, setToggle] = useState(false);
+
+    const showToggleAction = () => setToggle(!toggle);
+
     return (
         <header className="header">
 
-            <Navbar expand="lg" className="container my-navbar">
-                <Link className="navbar-brand navbar-logo" to='/'>
+            <nav className="container my-navbar">
+                <Link className="navbar-logo" to='/'>
                     <span className="my-navbar-brand">M</span>ehedi
                 </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ml-auto my-navbar-nav">
-                            <Link activeClass="active" spy={true} smooth={true} offset={-80} duration={500}
-                                  to="home">Home</Link>
-                            <Link activeClass="active" spy={true} smooth={true} offset={-80} duration={500}
-                                  to="about">About</Link>
-                            <Link activeClass="active" spy={true} smooth={true} offset={-80} duration={500}
-                                  to="resume">Resume</Link>
-                            <Link activeClass="active" spy={true} smooth={true} offset={-80} duration={500}
-                                  to="services">Services</Link>
-                            <Link activeClass="active" spy={true} smooth={true} offset={-80} duration={500}
-                                  to="project">Project</Link>
-                            <Link activeClass="active" spy={true} smooth={true} offset={-80} duration={500}
-                                  to="contact">Contact</Link>
-                        </Nav>
-                    </Navbar.Collapse>
-            </Navbar>
+
+                <Link className="toggle" to='#'>
+                    <FaBars onClick={showToggleAction}/>
+                </Link>
+
+                <ul className={toggle ? "nav-items active" : "nav-items"}>
+                    <li>
+                        <Link onClick={showToggleAction} activeClass="link-active" spy={true} smooth={true} offset={-80}
+                              duration={500} to="home">Home</Link>
+                    </li>
+                    <li>
+                        <Link onClick={showToggleAction} activeClass="link-active" spy={true} smooth={true} offset={-80}
+                              duration={500} to="about">About</Link>
+                    </li>
+                    <li>
+                        <Link onClick={showToggleAction} activeClass="link-active" spy={true} smooth={true} offset={-80}
+                              duration={500} to="resume">Resume</Link>
+                    </li>
+                    <li>
+                        <Link onClick={showToggleAction} activeClass="link-active" spy={true} smooth={true} offset={-80}
+                              duration={500} to="services">Services</Link>
+                    </li>
+                    <li>
+                        <Link onClick={showToggleAction} activeClass="link-active" spy={true} smooth={true} offset={-80}
+                              duration={500} to="project">Project</Link>
+                    </li>
+                    <li>
+                        <Link onClick={showToggleAction} activeClass="link-active" spy={true} smooth={true} offset={-80}
+                              duration={500} to="contact">Contact</Link>
+                    </li>
+                </ul>
+            </nav>
 
         </header>
     );

@@ -1,5 +1,6 @@
 .banner-section {
     height: calc(100vh - 80px);
+    margin-top: 80px;
     background-image: url('../images/banner.jpg');
     background-repeat: no-repeat;
     background-position: center;
