@@ -38,9 +38,15 @@ class Contact extends Component {
     sendEmail = e => {
         e.preventDefault();
 
+        this.setState({loading: true});
+
         emailjs.sendForm('gmail', 'template_i20p30b', e.target, 'user_QsaGrTVWRr0fFn02HpZ7R')
             .then((result) => {
+
                     console.log(result.text);
+
+                    this.setState({loading: false});
+
                     Swal.fire({
                         title: 'Your Message Has been Sent',
                         icon: 'success',
@@ -51,6 +57,9 @@ class Contact extends Component {
                 },
                 (error) => {
                     console.log(error.text);
+
+                    this.setState({loading: false});
+
                 });
 
         this.setState({
