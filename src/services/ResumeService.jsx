@@ -3,9 +3,9 @@ import axios from "axios";
 /*const baseUrlEdu = 'http://localhost:8082/public/request/education';
 const baseUrlExp = 'http://localhost:8082/public/request/experience';
 const baseUrlSkill = 'http://localhost:8082/public/request/skill';*/
-const baseUrlEdu = 'http://20.46.181.244:8082/public/request/education';
-const baseUrlExp = 'http://20.46.181.244:8082/public/request/experience';
-const baseUrlSkill = 'http://20.46.181.244:8082/public/request/skill';
+const baseUrlEdu = 'http://20.193.228.32:8082/public/request/education';
+const baseUrlExp = 'http://20.193.228.32:8082/public/request/experience';
+const baseUrlSkill = 'http://20.193.228.32:8082/public/request/skill';
 
 const education_list = baseUrlEdu + '/list';
 const experience_list = baseUrlExp + '/list';
